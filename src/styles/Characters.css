@@ -1,0 +1,122 @@
+@import './_vars.css';
+
+.characters-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    /* justify-content: space-around; */
+}
+
+/* .characters-container h1{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+} */
+
+.character-favorite{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    background-color: var(--color-bg-card);
+    border-radius: 0.5rem;
+    border: solid 1px var(--color-text-card);
+    font-size: 2rem;
+    gap: 5rem;
+    list-style: none;
+    color: black;
+}
+
+.character-favorite article{
+    width: 15rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.character-favorite article p{
+    height: 10rem;
+    text-align: center;
+}
+
+.character-favorite article img{
+    width: 100%;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+
+.character-search{
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.character-search button{
+    width: 10rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background-color: var(--color-bg-card);
+    border-radius: 0.5rem;
+    border: solid 1px var(--color-text-card);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.character-search input{
+    width: 50rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid 1px var(--color-text-card);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.character-info{
+    width: 30rem;
+    height: 60rem;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    background-color: var(--color-bg-card);
+    color: var(--color-text-card);
+    text-align: center;
+    display: block;
+    border-radius: 0.5rem;
+    border: solid 1px var(--color-text-card);
+    position: relative;
+}
+
+.character-info h2{
+    font-size: 3rem;
+}
+
+.character-info h3{
+    font-size: 2rem;
+}
+.character-info img{
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.character-info p{
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0 1rem;
+}
+
+.character-info button{
+    width: max-content;
+    height: 4rem;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    border: 2px solid var(--color-text-card);
+    border-radius: 0.5rem;
+    background-color: rgb(206, 201, 201);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
