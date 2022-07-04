@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useReducer, useMemo, useRef} from 'react'
+import React, { useState, useReducer, useMemo, useRef, useCallback} from 'react'
 import '../styles/Characters.css';
+import Search from './Search';
+import useCharacters from '../hooks/useCharacters';
 
 const initialState = {
   favorites: []
 }
+
+const API = ('https://rickandmortyapi.com/api/character?page=29');
 
 const favoriteReducer = (state, action) => {
   switch (action.type){
@@ -18,20 +22,21 @@ const favoriteReducer = (state, action) => {
 }
 
 const Characters = () => {
-  const[characters, setCharacters] = useState([]);
+  // const[characters, setCharacters] = useState([]);
   const[favorites, dispatch] = useReducer(favoriteReducer, initialState);
   const[search, setSearch] = useState('');
   const searchInput = useRef(null);
 
   // const page = '1';
-  const API = ('https://rickandmortyapi.com/api/character?page=26');
   // console.log(API)
 
-  useEffect(() => {
-    fetch(API)
-    .then(res => res.json())
-    .then(data => setCharacters(data.results))
-  }, [])
+   const characters = useCharacters(API)
+  
+  // useEffect(() => {
+  //   fetch(API)
+  //   .then(res => res.json())
+  //   .then(data => setCharacters(data.results))
+  // }, [])
 
   const handleClick = favorite => {
     dispatch({type: 'ADD_TO_FAVORITE', payload: favorite})
@@ -41,9 +46,13 @@ const Characters = () => {
   //   setSearch(event.target.value);
   // }
 
-  const handleSearch = () => {
+  // const handleSearch = () => {
+  //   setSearch(searchInput.current.value);
+  // }
+
+  const handleSearch = useCallback(() => {
     setSearch(searchInput.current.value);
-  }
+  }, [])
 
   // const filteredUsers = characters.filter((user) => {
   //   return user.name.toLowerCase().includes(search.toLowerCase());
@@ -66,17 +75,7 @@ const Characters = () => {
         ))}
       </section>
 
-      <div className='character-search'>
-        {/* <button onClick={prevPage}>Prev</button> */}
-
-        <input type="text" 
-        value={search}
-        ref={searchInput} 
-        onChange={handleSearch}
-        placeholder='Buscar' />
-
-        {/* <button onClick={nextPage}>Next</button> */}
-      </div>
+      <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
 
       {filteredUsers.map(character => (
         <article className='character-info' key={character.id}>
