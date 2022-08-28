@@ -7,7 +7,7 @@ const initialState = {
   favorites: []
 }
 
-const API = ('https://rickandmortyapi.com/api/character?page=29');
+const API = ('https://rickandmortyapi.com/api/character?page=1');
 
 const favoriteReducer = (state, action) => {
   switch (action.type){
