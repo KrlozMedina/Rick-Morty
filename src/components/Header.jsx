@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
-import ThemeContext from '../context/ThemeContext';
+import React, { useState } from 'react';
+import Logo from '../assets/Titulo.webp';
+import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md';
 import '../styles/Header.css'
 
 const Header = () => {
-    const [darkMode, setDarkMode] = useState(false);
-    const color = useContext(ThemeContext);
+    const [darkMode, setDarkMode] = useState(true);
 
     const handleClick = () => {
         setDarkMode(!darkMode);
@@ -12,10 +12,11 @@ const Header = () => {
     }
 
     return (
-        <div className='header-container'>
-            <h1 style={{ color }}>Rick & Morty</h1>
-            <button type='button' onClick={handleClick}>{darkMode ? 'Light Mode' : 'Dark Mode'}</button>
-        </div>
+        <section className='header'>
+            <button type='button' className='mini-button'></button>
+            <img src={Logo} className="header__logo" alt="" />
+            <button className='mini-button' type='button' onClick={handleClick}>{darkMode ? <MdDarkMode /> :  <MdOutlineDarkMode />}</button>
+        </section>
     )
 }
 

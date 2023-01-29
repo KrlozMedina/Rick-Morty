@@ -1,7 +1,6 @@
-import './App.css';
 import Header from './components/Header';
 import Characters from './components/Characters';
-import './styles/global.css'
+import './App.css';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useReducer, useMemo, useRef, useCallback} from 'react'
-import '../styles/Characters.css';
 import Search from './Search';
 import useCharacters from '../hooks/useCharacters';
+import '../styles/Characters.css';
 
 const initialState = {
   favorites: []
@@ -22,50 +22,27 @@ const favoriteReducer = (state, action) => {
 }
 
 const Characters = () => {
-  // const[characters, setCharacters] = useState([]);
   const[favorites, dispatch] = useReducer(favoriteReducer, initialState);
   const[search, setSearch] = useState('');
   const searchInput = useRef(null);
-
-  // const page = '1';
-  // console.log(API)
-
-   const characters = useCharacters(API)
-  
-  // useEffect(() => {
-  //   fetch(API)
-  //   .then(res => res.json())
-  //   .then(data => setCharacters(data.results))
-  // }, [])
+  const characters = useCharacters(API)
 
   const handleClick = favorite => {
     dispatch({type: 'ADD_TO_FAVORITE', payload: favorite})
   }
 
-  // const handleSearch = (event) => {
-  //   setSearch(event.target.value);
-  // }
-
-  // const handleSearch = () => {
-  //   setSearch(searchInput.current.value);
-  // }
-
   const handleSearch = useCallback(() => {
     setSearch(searchInput.current.value);
   }, [])
 
-  // const filteredUsers = characters.filter((user) => {
-  //   return user.name.toLowerCase().includes(search.toLowerCase());
-  // })
-
   const filteredUsers = useMemo(() => characters.filter((user) => {
-      return user.name.toLowerCase().includes(search.toLowerCase());
-    }), [characters, search]
-  )
+    return user.name.toLowerCase().includes(search.toLowerCase());
+  }), [characters, search])
 
   return (
     <div className='characters-container'>
-      {/* <h1>Favoritos</h1> */}
+      <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
+
       <section className='character-favorite'>
         {favorites.favorites.map(favorite => (
           <article key={favorite.id}>
@@ -75,12 +52,16 @@ const Characters = () => {
         ))}
       </section>
 
-      <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
-
       {filteredUsers.map(character => (
         <article className='character-info' key={character.id}>
           <h2>{character.name}</h2>
-          <h3>{character.status}</h3>
+          <div style={{display: "inline-flex"}}>
+            <h3 style={
+              (character.status==="Alive" && {color: "green"}) ||
+              (character.status==="Dead" && {color: "red"}) ||
+              (character.status==="unknown" && {color: "gray"})
+            }>{character.status}</h3>
+          </div>
           <img src={character.image} alt="" />
           <p><b>Especie: </b>{character.species}</p>
           <p><b>Genero: </b>{character.gender}</p>
