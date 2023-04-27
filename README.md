@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Título: El nombre del proyecto y una breve descripción para resumir su propósito.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://img.shields.io/github/stars/KrlozMedina/Rick-Morty)
+![](https://img.shields.io/github/forks/KrlozMedina/Rick-Morty)
+![](https://img.shields.io/github/tag/KrlozMedina/Rick-Morty)
+![](https://img.shields.io/github/release/KrlozMedina/Rick-Morty)
+![](https://img.shields.io/github/issues/KrlozMedina/Rick-Morty)
 
-## Available Scripts
+## Descripción
+Una explicación más detallada del proyecto, su objetivo y su contexto.
 
-In the project directory, you can run:
+## Tabla de contenido
 
-### `npm start`
+- [Estado del proyecto](#estado-del-proyecto)
+- [Instalacion](#instalación)
+- [Uso](#uso)
+- [Contribucion](#contribución)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Dependencias](#dependencias)
+- [Ejemplos](#ejemplos)
+- [Documentacion adicional](#documentación-adicional)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estado del proyecto
+Puedes indicar si el proyecto está en desarrollo, en fase de pruebas, en producción, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalación
+Instrucciones paso a paso para instalar y configurar el proyecto en un entorno local o en la nube.
 
-### `npm test`
+## Uso
+Explica cómo utilizar el proyecto, cómo ejecutarlo y cómo interactuar con él.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contribución
+Si permites contribuciones de la comunidad, proporciona pautas claras para que otros puedan colaborar en el proyecto. Incluye información sobre el proceso de solicitud de extracción (pull request) y las reglas de estilo de código si corresponde.
 
-### `npm run build`
+## Estructura del proyecto
+Si el proyecto tiene una estructura de directorios específica, menciona los directorios clave y su propósito.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependencias
+Enumera las dependencias externas necesarias para ejecutar el proyecto, incluyendo bibliotecas y frameworks, y cómo instalarlas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Ejemplos
+Si es posible, proporciona ejemplos de código o casos de uso para ayudar a los usuarios a comprender cómo utilizar el proyecto de manera más efectiva.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Documentación adicional
+Si hay documentación adicional disponible, como una wiki o una documentación más extensa, menciona los enlaces relevantes.
 
-### `npm run eject`
+## Licencia
+Especifica la licencia del proyecto para que los usuarios sepan los términos bajo los cuales pueden utilizarlo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contacto
+Proporciona información de contacto, como una dirección de correo electrónico o un enlace a la página de contacto, para que los usuarios puedan comunicarse contigo si tienen preguntas o problemas.
